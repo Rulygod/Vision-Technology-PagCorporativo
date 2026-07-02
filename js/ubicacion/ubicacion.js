@@ -91,14 +91,6 @@ function crearIndicadores() {
             punto.classList.add("activo");
         }
 
-        punto.addEventListener("click", () => {
-
-            indice = i;
-
-            mostrarSucursal();
-
-        });
-
         indicadores.appendChild(punto);
 
     });
@@ -140,22 +132,3 @@ btnSiguiente.addEventListener("click", siguienteSucursal);
 crearIndicadores();
 
 mostrarSucursal();
-
-// ======================================
-// CAMBIO AUTOMÁTICO (Opcional)
-// ======================================
-
-let temporizador = setInterval(siguienteSucursal, 20000); //20 segundos
-
-// Reinicia el temporizador cuando el usuario interactúa
-function reiniciarTemporizador() {
-
-    clearInterval(temporizador);
-
-    temporizador = setInterval(siguienteSucursal, 20000); //20 segundos
-
-}
-
-btnAnterior.addEventListener("click", reiniciarTemporizador);
-
-btnSiguiente.addEventListener("click", reiniciarTemporizador);

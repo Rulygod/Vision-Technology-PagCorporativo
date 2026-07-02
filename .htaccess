@@ -1,0 +1,24 @@
+# .htaccess - Seguridad básica
+
+# 1. Proteger archivos sensibles
+<FilesMatch "^(config|database|\.env|\.git|README)">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# 2. Deshabilitar listado de directorios
+Options -Indexes
+
+# 3. Prevenir hotlinking (robo de imágenes)
+RewriteEngine on
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^https://(www\.)?tusitio.com [NC]
+RewriteRule \.(jpg|jpeg|png|gif|webp)$ - [F,NC]
+
+# 4. Proteger contra ataques XSS
+<IfModule mod_headers.c>
+    Header set X-XSS-Protection "1; mode=block"
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>

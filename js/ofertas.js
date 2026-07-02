@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", () => {
     const rutaOfertas = "imgs/ofertas/";
 
@@ -7,17 +6,16 @@ document.addEventListener("DOMContentLoaded", () => {
         "lenovo legion 5.jpg",
         "monitor lenovo 23plg.jpeg",
         "orico ssd externo.jpg",
-        "rac apc servidor.jpg",
-        "Oferta.jpeg"
+        "rac apc servidor.jpg",        
     ];
 
-    const tiempoCambio = 9000; //9 segundos
+    const tiempoCambio = 9000; // 9 segundos
     const duracionTransicion = 650;
 
     const grid = document.querySelector(".offers__grid");
     const imagenes = document.querySelectorAll(".offers__img");
 
-    if (!grid || imagenes.length < 2 || ofertas.length < 2) return;
+    if (!grid || imagenes.length < 2 || ofertas.length < 1) return;
 
     let indice = 0;
     let animando = false;
@@ -57,35 +55,36 @@ document.addEventListener("DOMContentLoaded", () => {
     document.head.appendChild(estilos);
 
     function cargarOfertas() {
-        imagenes[0].src = rutaOfertas + ofertas[indice % ofertas.length];
-        imagenes[1].src = rutaOfertas + ofertas[(indice + 1) % ofertas.length];
+        imagenes.forEach((img, i) => {
+            const posicion = (indice + i) % ofertas.length;
 
-        imagenes[0].alt = "Oferta empresarial";
-        imagenes[1].alt = "Oferta empresarial";
+            img.src = rutaOfertas + ofertas[posicion];
+            img.alt = "Oferta empresarial";
+        });
     }
 
     function cambiarOfertas() {
         if (animando) return;
+
         animando = true;
 
-        imagenes.forEach(img => {
+        imagenes.forEach((img) => {
             img.classList.remove("slide-in", "slide-active");
             img.classList.add("slide-out");
         });
 
         setTimeout(() => {
-            indice = (indice + 2) % ofertas.length;
+            indice = (indice + 1) % ofertas.length;
 
-            imagenes[0].src = rutaOfertas + ofertas[indice % ofertas.length];
-            imagenes[1].src = rutaOfertas + ofertas[(indice + 1) % ofertas.length];
+            cargarOfertas();
 
-            imagenes.forEach(img => {
+            imagenes.forEach((img) => {
                 img.classList.remove("slide-out");
                 img.classList.add("slide-in");
             });
 
             requestAnimationFrame(() => {
-                imagenes.forEach(img => {
+                imagenes.forEach((img) => {
                     img.classList.remove("slide-in");
                     img.classList.add("slide-active");
                 });
@@ -99,9 +98,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     cargarOfertas();
 
-    imagenes.forEach(img => {
+    imagenes.forEach((img) => {
         img.classList.add("slide-active");
     });
 
-    setInterval(cambiarOfertas, tiempoCambio);
+    if (ofertas.length > 1) {
+        setInterval(cambiarOfertas, tiempoCambio);
+    }
 });

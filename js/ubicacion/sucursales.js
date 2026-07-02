@@ -5,18 +5,18 @@ const sucursales = [
         ciudad: "La Paz",
 
         descripcion:
-        "Nuestra sucursal en La Paz está lista para atenderlo.",
+            "Nuestra sucursal en La Paz está lista para atenderlo.",
 
-        direccion: "Av. Mariscal Santa Cruz #123",
+        direccion: "Calle Mexico N°1790 Edificio María Reyna Piso 2 Oficina C",
 
-        telefono: "+591 71234567",
+        telefono: "+591 77799394",
 
-        correo: "lapaz@empresa.com",
+        correo: "ramiro.sanchez@visiontech.com.bo",
 
-        horario: "Lun - Vie: 08:00 - 18:30",
+        horario: "Lun - Vie: 08:30 - 18:30",
 
         mapa:
-        "https://www.google.com/maps?q=La+Paz,Bolivia&output=embed"
+        "https://www.google.com/maps?q=-16.5034654,-68.132196&z=18&output=embed"
 
     },
 
@@ -25,18 +25,18 @@ const sucursales = [
         ciudad: "Santa Cruz",
 
         descripcion:
-        "Nuestra sucursal en Santa Cruz está lista para atenderlo.",
+            "Nuestra sucursal en Santa Cruz está lista para atenderlo.",
 
-        direccion: "Av. Cristo Redentor #456",
+        direccion: "Entre 3er y 4to Anillo, Prolongacion La Barranca, Barrio Hawai, Calle 7 #11",
 
-        telefono: "+591 72345678",
+        telefono: "+591 77549009",
 
-        correo: "santacruz@empresa.com",
+        correo: "ventas1@visiontech.com.bo",
 
-        horario: "Lun - Vie: 08:00 - 18:30",
+        horario: "Lun - Vie: 08:30 - 18:30",
 
         mapa:
-        "https://www.google.com/maps?q=Santa+Cruz,Bolivia&output=embed"
+        "https://www.google.com/maps?q=-17.812293,-63.1684475&z=18&output=embed"
 
     }
 

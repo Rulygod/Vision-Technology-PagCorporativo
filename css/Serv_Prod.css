@@ -1,4 +1,3 @@
-
 /* =========================
    SECCIÓN GENERAL
 ========================= */
@@ -17,7 +16,6 @@
 
     overflow: hidden;
 }
-
 /* =========================
    BLOQUE IZQUIERDO
 ========================= */
@@ -42,8 +40,7 @@
     font-weight: 800;
     letter-spacing: clamp(0.6px, 0.08vw, 1px);
 
-    padding:
-        clamp(3px, 0.3vw, 4px) clamp(9px, 0.8vw, 12px);
+    padding: clamp(3px, 0.3vw, 4px) clamp(9px, 0.8vw, 12px);
 
     margin-bottom: clamp(7px, 0.7vw, 10px);
     text-transform: uppercase;
@@ -166,27 +163,21 @@
 }
 
 /* =========================
-   TARJETA PRINCIPAL
+   TARJETA PRINCIPAL (CORREGIDA)
 ========================= */
 
 .carousel-card {
     width: 100%;
     max-width: 680px;
-
-    min-height: auto;             /* alto mínimo */
     height: auto;
-    padding: 22px 52px 80px;       /* espacio interno */
-
-    border: 1.5px solid #ff1a1a;
-    border-radius: clamp(42px, 4.5vw, 72px);
-
     background: #000;
     position: relative;
-
-    padding:
-        clamp(22px, 2vw, 34px) clamp(45px, 5vw, 80px) clamp(85px, 6vw, 105px);
-
+    border: 1.5px solid #ff1a1a;
+    border-radius: clamp(42px, 4.5vw, 72px);
     overflow: visible;
+
+    /* REDUCCIÓN: Ajustamos el padding superior e inferior */
+    padding: clamp(35px, 4vw, 45px) clamp(45px, 5vw, 80px) clamp(75px, 6vw, 95px);
 }
 
 /* =========================
@@ -215,21 +206,23 @@
 }
 
 /* =========================
-   IMAGEN DEL CARRUSEL
+   IMAGEN DEL CARRUSEL (CORREGIDA)
 ========================= */
 
 .carousel-image {
     display: block;
-
     width: 100%;
-    max-width: 220px;
     height: auto;
-    aspect-ratio: 1/1;
-
-    object-fit: contain;
+    
+    /* REFORMADO: Cambiamos 1/1 a 16/9 para adaptarlo a la proporción real de renders tecnológicos */
+    aspect-ratio: 16 / 9;
+    
+    object-fit: cover; /* Cambiado de 'contain' a 'cover' para eliminar barras negras fantasmas */
     object-position: center;
+    border-radius: 16px; /* Le da un acabado limpio a las esquinas de tus imágenes */
 
-    margin: 0 auto clamp(18px, 1.7vw, 26px);
+    /* REDUCCIÓN: Bajamos la separación con el texto */
+    margin: 0 auto clamp(12px, 1.2vw, 18px);
 }
 
 /* =========================
@@ -249,7 +242,7 @@
     font-size: clamp(18px, 1.45vw, 24px);
     font-weight: 900;
 
-    margin-bottom: clamp(8px, 0.8vw, 12px);
+    margin-bottom: clamp(6px, 0.6vw, 10px); /* Reducido levemente */
 
     text-transform: uppercase;
 }
@@ -257,13 +250,12 @@
 .carousel-content p {    
     color: #fff;
 
-    font-size: clamp(17px, 1.05vw, 16px);
-    line-height: 1.6;
+    font-size: clamp(14px, 1.05vw, 16px); /* Corregido clamp al revés que tenías (17px a 16px) */
+    line-height: 1.5;
     font-weight: 600;
 
     text-transform: uppercase;
 }
-
 /* =========================
    BOTONES DEL CARRUSEL
 ========================= */
@@ -315,7 +307,7 @@
 .carousel-dots {
     position: absolute;
     left: 50%;
-    bottom: clamp(24px, 2vw, 32px);
+    bottom: clamp(20px, 1.8vw, 26px); /* Subido sutilmente para balancear */
 
     transform: translateX(-50%);
 
@@ -401,7 +393,7 @@
     .carousel-card {
         width: min(100%, 620px);
         height: auto;
-        min-height: 560px;
+        min-height: auto; /* Quitamos altura mínima rígida */
     }
 
     .carousel-btn-left {
@@ -458,113 +450,35 @@
         width: 100%;
         min-height: auto;
         border-radius: 38px;
-
-        /* Más espacio lateral para que las flechas no pisen el texto */
-        padding: 22px 56px 90px;
-    }
-
-    .carousel-track {
-        min-height: auto;
+        padding: 22px 36px 75px; /* Reducción lateral adaptada */
     }
 
     .carousel-image {
-        max-width: 190px;
-    }
-
-    .carousel-content {
-        max-width: 100%;
-        padding-bottom: 20px;
+        max-width: 100%; /* Deja que use el ancho del contenedor */
     }
 
     .carousel-content h3 {
         font-size: 18px;
-        line-height: 1.2;
-        text-align: left;
+        text-align: center; /* Mejor centrado en móviles */
     }
 
     .carousel-content p {
         font-size: 14px;
-        line-height: 1.45;
-        font-weight: 800;
-        text-align: left;
+        text-align: center;
     }
 
     .carousel-btn {
         width: 42px;
         height: 42px;
         font-size: 24px;
-        top: 58%;
-        z-index: 30;
+        top: 40%; /* Lo subimos para que quede centrado con la imagen en vertical */
     }
 
     .carousel-btn-left {
-        left: 10px;
-        transform: translateY(-50%);
+        left: -10px;
     }
 
     .carousel-btn-right {
-        right: 10px;
-        transform: translateY(-50%);
-    }
-
-    .carousel-dots {
-        bottom: 28px;
-        max-width: 85%;
-        gap: 10px;
-    }
-
-    .carousel-dot {
-        width: 14px;
-        height: 14px;
-    }
-}
-
-@media (max-width: 420px) {
-    .serv-prod-section {
-        padding: 35px 15px;
-    }
-
-    .serv-prod-title {
-        font-size: 32px;
-    }
-
-    .carousel-card {
-        border-radius: 25px;
-
-        /* Este es el ajuste clave para iPhone SE */
-        padding: 20px 48px 82px;
-    }
-
-    .carousel-image {
-        max-width: 180px;
-    }
-
-    .carousel-content h3 {
-        font-size: 17px;
-    }
-
-    .carousel-content p {
-        font-size: 13px;
-        line-height: 1.45;
-    }
-
-    .carousel-btn {
-        width: 38px;
-        height: 38px;
-        font-size: 22px;
-        top: 58%;
-    }
-
-    .carousel-btn-left {
-        left: 8px;
-    }
-
-    .carousel-btn-right {
-        right: 8px;
-    }
-
-    .carousel-dot {
-        width: 12px;
-        height: 12px;
+        right: -10px;
     }
 }
