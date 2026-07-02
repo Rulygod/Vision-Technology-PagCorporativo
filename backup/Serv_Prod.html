@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios y Productos</title>
+
+    <!-- Fuente Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/fondo.css">
+    <link rel="stylesheet" href="css/Serv_Prod.css">
+</head>
+
+<body>
+
+    <!-- Inicio Servicios y Productos -->
+    <section class="serv-prod-section">
+
+        <!-- Bloque izquierdo -->
+        <div class="serv-prod-info">
+
+            <div class="serv-prod-badge">
+                <span class="serv-prod-badge-icon">▦</span>
+                SOLUCIONES TECNOLÓGICAS
+            </div>
+
+            <h1 class="serv-prod-title">
+                Servicios y Productos
+            </h1>
+
+            <div class="serv-prod-line"></div>
+
+            <p class="serv-prod-description">
+                IMPULSAMOS TU EMPRESA CON TECNOLOGÍA<br>
+                CONFIABLE, EFICIENTE Y ESCALABLE
+            </p>
+
+            <div class="serv-prod-line serv-prod-line-second"></div>
+
+            <p class="serv-prod-description serv-prod-description-small">
+                SERVICIO TÉCNICO DE PRIMER NIVEL<br>
+                DISPONIBLE PARA TU EMPRESA
+            </p>
+
+            <a href="" class="serv-prod-button">
+                Contactar ahora
+                <img src="imgs/Serv_Prod/flecha.svg" alt="" class="serv-prod-button-icon">
+            </a>
+
+        </div>
+
+        <!-- Inicio del Carrusel -->
+        <div class="services-carousel">
+
+            <div class="carousel-card">
+
+                <button class="carousel-btn carousel-btn-left" id="prevBtn">
+                    &lt;
+                </button>
+
+                <div class="carousel-track" id="carouselTrack">
+
+                    <!-- SERVICIO 1 -->
+                    <article class="carousel-item active">
+                        <img src="imgs/Serv_Prod/Laptop.png" alt="Servicio técnico" class="carousel-image">
+
+                        <div class="carousel-content">
+                            <h3>NUESTRO SERVICIO TÉCNICO</h3>
+
+                            <p>
+                                ATENCIÓN CONFIABLE, RÁPIDA Y DE ALTA CALIDAD,
+                                CON PERSONAL CAPACITADO, SOLUCIONES EFECTIVAS Y
+                                PROFESIONAL PARA MANTENER TUS EQUIPOS FUNCIONANDO
+                                SIEMPRE SIN COMPLICACIONES.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- SERVICIO 2 -->
+                    <article class="carousel-item">
+                        <img src="imgs/Serv_Prod/Impresora.png" alt="Mantenimiento preventivo" class="carousel-image">
+
+                        <div class="carousel-content">
+                            <h3>MANTENIMIENTO PREVENTIVO</h3>
+
+                            <p>
+                                IMPRESORAS, PCS, LAPTOPS, MONITORES,
+                                TABLETS, SERVIDORES, REDES Y 
+                                PERIFÉRICOS PARA EMPRESAS QUE 
+                                BUSCAN TECNOLOGÍA CONFIABLE Y 
+                                EFICIENTE.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- SERVICIO 3 -->
+                    <article class="carousel-item">
+                        <img src="imgs/Serv_Prod/Audifonos.png" alt="Soporte especializado" class="carousel-image">
+
+                        <div class="carousel-content">
+                            <h3>SOPORTE ESPECIALIZADO</h3>
+
+                            <p>
+                                TE AYUDAMOS A ELEGIR LOS EQUIPOS 
+                                ADECUADOS SEGÚN TUS NECESIDADES, 
+                                PRESUPUESTO Y OBJETIVOS, 
+                                ASEGURANDO UNA COMPRA 
+                                INTELIGENTE, CONFIABLE Y PENSADA 
+                                PARA TU EMPRESA
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- 
+
+                    PARA CREAR UN NUEVO SERVICIO
+
+                    Para crear un nuevo servicio o producto se debe copiar cada sección que diga "article" 
+                    debajo del último "article" y cambiar la ruta de la imagen por la nueva además de la 
+                    descripción y título.
+
+                    -->
+
+                </div>
+
+                <!-- Indicadores inferiores -->
+                <div class="carousel-dots">
+                    <span class="carousel-dot active"></span>
+                    <span class="carousel-dot"></span>
+                    <span class="carousel-dot"></span>
+                <!-- Si va a añadir un un nuevo servicio debe copiar y pegar el último apartado de 
+                 span para que se vea una bolita extra dentro del carrusel-->
+
+                </div>
+
+                <button class="carousel-btn carousel-btn-right" id="nextBtn">
+                    &gt;
+                </button>
+
+            </div>
+
+        </div>
+        <!-- Fin del Carrusel -->
+
+    </section>
+    <!-- Fin Servicios y Productos -->
+
+    <script src="js/Serv_Prod.js"></script>
+
+</body>
+
+</html>

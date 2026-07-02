@@ -1,0 +1,363 @@
+/* ==========================
+   CONTENEDOR GENERAL
+========================== */
+
+.mision-hero{
+    max-width:1200px;
+    margin:0 auto;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    gap:70px;
+
+    padding:60px 20px;
+}
+
+/*==========================
+      COLUMNA IZQUIERDA
+==========================*/
+
+.mision-hero__content{
+    width:520px;
+}
+
+.mision-hero__content h1{
+    font-size:50px;
+    font-weight:800;
+    color:#ececec;
+    margin-bottom:18px;
+}
+
+.mision-hero__content>p:nth-of-type(1){
+    font-size:22px;
+    font-weight:700;
+    margin-bottom:28px;
+}
+
+.mision-hero__content>p:nth-of-type(2){
+    color:#b9bcc4;
+    font-size:16px;
+    line-height:1.9;
+    margin-bottom:55px;
+}
+
+/*==========================
+        BENEFICIOS
+==========================*/
+
+.benefits-list{
+
+    list-style:none;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    row-gap:34px;
+
+    column-gap:50px;
+}
+
+.benefits-list li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    font-size:14px;
+
+    font-weight:5s00;
+
+    color:white;
+}
+
+.benefits-list svg{
+
+    color:#ff1e26;
+
+    width:24px;
+
+    height:24px;
+
+    flex-shrink:0;
+}
+
+
+/*==========================
+      COLUMNA DERECHA
+==========================*/
+
+.mision-hero__visual{
+
+    width:650px;
+
+    flex-shrink:0;
+}
+
+.mission-vision__container{
+
+    border:2px solid #ff1e26;
+
+    border-radius:30px;
+
+    background:#050506;
+
+    padding:22px;
+
+}
+
+
+/*==========================
+          IMAGEN
+==========================*/
+
+.mission-vision__banner{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:18px;
+
+    margin-bottom:28px;
+}
+
+
+/*==========================
+     MISION - VISION
+==========================*/
+
+.mission-vision__text-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:30px;
+}
+
+.mission-vision__block h3{
+
+    color:#ff1e26;
+
+    text-align:center;
+
+    font-size:20px;
+
+    font-weight:800;
+
+    font-style:italic;
+
+    margin-bottom:12px;
+}
+.empresa{
+    color:#f4f4f5;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.5px;
+    margin-bottom:28px;
+}
+.mission-vision__block p{
+
+    color:#c7c8cd;
+
+    font-size:15px;
+
+    line-height:1.9;
+
+    text-align:left;
+}
+
+
+/*==========================
+      RESPONSIVE
+==========================*/
+
+@media (max-width:1200px){
+
+    .mision-hero{
+
+        max-width:1000px;
+
+        gap:40px;
+
+        padding:50px 20px;
+
+    }
+
+    .mision-hero__content{
+
+        width:460px;
+
+    }
+
+    .mision-hero__visual{
+
+        width:520px;
+
+    }
+
+    .mision-hero__content h1{
+
+        font-size:44px;
+
+    }
+
+    .benefits-list{
+
+        column-gap:30px;
+
+    }
+
+}
+@media (max-width:992px){
+
+    .mision-hero{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        gap:45px;
+
+        min-height:auto;
+
+    }
+
+    .mision-hero__content{
+
+        width:100%;
+
+        max-width:700px;
+
+    }
+
+    .mision-hero__visual{
+
+        width:100%;
+
+        max-width:700px;
+
+    }
+
+    .mision-hero__content h1{
+
+        font-size:40px;
+
+    }
+
+    .mision-hero__content>p:nth-of-type(1){
+
+        font-size:20px;
+
+    }
+
+    .mision-hero__content>p:nth-of-type(2){
+
+        margin-bottom:35px;
+
+    }
+
+    .benefits-list{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:25px;
+
+    }
+
+    .mission-vision__text-grid{
+
+        grid-template-columns:1fr;
+
+        gap:25px;
+
+    }
+
+}
+@media (max-width:576px){
+
+    .mision-hero{
+
+        padding:35px 15px;
+
+    }
+
+    .mision-hero__content h1{
+
+        font-size:32px;
+
+    }
+
+    .mision-hero__content>p:nth-of-type(1){
+
+        font-size:18px;
+
+    }
+
+    .mision-hero__content>p:nth-of-type(2){
+
+        font-size:15px;
+
+        line-height:1.7;
+
+        margin-bottom:30px;
+
+    }
+
+    .benefits-list{
+
+        grid-template-columns:1fr;
+
+        row-gap:18px;
+
+    }
+
+    .benefits-list li{
+
+        justify-content:center;
+
+        text-align:left;
+
+        font-size:15px;
+
+    }
+
+    .mission-vision__container{
+
+        padding:16px;
+
+        border-radius:20px;
+
+    }
+
+    .mission-vision__banner{
+
+        border-radius:14px;
+
+        margin-bottom:20px;
+
+    }
+
+    .mission-vision__block h3{
+
+        font-size:18px;
+
+    }
+
+    .mission-vision__block p{
+
+        font-size:14px;
+
+        line-height:1.7;
+
+        text-align:center;
+
+    }
+
+}

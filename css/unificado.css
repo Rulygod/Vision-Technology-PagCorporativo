@@ -1,0 +1,55 @@
+/* Ajustes para la versión unificada de una sola página */
+body {
+    overflow-x: hidden;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.page-content {
+    width: 100%;
+}
+
+.page-section {
+    width: 100%;
+    scroll-margin-top: 96px;
+}
+
+#inicio {
+    padding-top: 82px;
+}
+
+#blog {
+    min-height: 220px;
+    padding: 70px 20px;
+    text-align: center;
+    color: #c8c8cf;
+}
+
+#blog h2 {
+    color: #fff;
+    font-size: clamp(32px, 4vw, 48px);
+    margin-bottom: 14px;
+}
+
+@media (max-width: 950px) {
+    .page-section {
+        scroll-margin-top: 170px;
+    }
+
+    #inicio {
+        padding-top: 160px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.page-section {
+    scroll-margin-top: 120px;
+}

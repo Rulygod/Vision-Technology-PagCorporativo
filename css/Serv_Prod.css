@@ -1,0 +1,570 @@
+
+/* =========================
+   SECCIÓN GENERAL
+========================= */
+
+.serv-prod-section {
+    width: 100%;
+    background: #151517;
+
+    display: grid;
+    grid-template-columns: minmax(300px, 420px) minmax(420px, 720px);
+    align-items: center;
+    justify-content: center;
+
+    gap: clamp(45px, 6vw, 90px);
+    padding: clamp(55px, 7vw, 90px) clamp(28px, 5vw, 80px);
+
+    overflow: hidden;
+}
+
+/* =========================
+   BLOQUE IZQUIERDO
+========================= */
+
+.serv-prod-info {
+    width: 100%;
+    max-width: 430px;
+    margin-top: 0;
+}
+
+.serv-prod-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: clamp(4px, 0.4vw, 6px);
+
+    border: 1px solid #ff1a1a;
+    border-radius: 999px;
+
+    color: #ff1a1a;
+    font-size: clamp(8px, 0.65vw, 10px);
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: clamp(0.6px, 0.08vw, 1px);
+
+    padding:
+        clamp(3px, 0.3vw, 4px) clamp(9px, 0.8vw, 12px);
+
+    margin-bottom: clamp(7px, 0.7vw, 10px);
+    text-transform: uppercase;
+}
+
+.serv-prod-badge-icon {
+    font-size: clamp(8px, 0.65vw, 10px);
+}
+
+.serv-prod-title {
+    color: #f1f1f3;
+
+    font-size: clamp(23px, 5.4vw, 70px);
+    line-height: 0.96;
+    font-weight: 800;
+    letter-spacing: clamp(-4px, -0.22vw, -2px);
+}
+
+.serv-prod-title span {
+    display: block;
+    color: #ff1a1a;
+}
+
+.serv-prod-line {
+    width: clamp(45px, 4.2vw, 67px);
+    height: clamp(4px, 0.42vw, 6px);
+
+    background: #ff1a1a;
+    border-radius: 999px;
+
+    margin-top: clamp(20px, 1.7vw, 28px);
+    margin-bottom: clamp(10px, 0.9vw, 14px);
+}
+
+.serv-prod-line-second {
+    margin-top: clamp(38px, 4vw, 56px);
+}
+
+.serv-prod-description {
+    color: #f4f4f4;
+
+    font-size: clamp(12px, 0.95vw, 15px);
+    line-height: 1.08;
+    font-weight: 800;
+    letter-spacing: clamp(0.4px, 0.05vw, 0.7px);
+
+    text-transform: uppercase;
+}
+
+.serv-prod-description-small {
+    font-size: clamp(11px, 0.9vw, 14px);
+}
+
+/* =========================
+   BOTÓN IZQUIERDO
+========================= */
+
+.serv-prod-button {
+    --button-transition-speed: 0.35s;
+
+    width: clamp(225px, 17vw, 290px);
+    min-height: clamp(52px, 4vw, 64px);
+
+    margin-top: clamp(70px, 10vh, 115px);
+    margin-left: clamp(0px, 2.6vw, 36px);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    text-decoration: none;
+    color: #ffffff;
+
+    font-size: clamp(14px, 1vw, 16px);
+    font-weight: 600;
+
+    border: 1px solid transparent;
+    border-radius: 8px;
+
+    background:
+        linear-gradient(#7f11124d, #7f11124d) padding-box,
+        linear-gradient(90deg, #7F1112 0%, #E51E21 50%, #7F1112 100%) border-box;
+
+    box-shadow: 0 0 34px rgba(255, 0, 0, 0.08);
+
+    transition:
+        background var(--button-transition-speed) ease,
+        box-shadow var(--button-transition-speed) ease;
+}
+
+.serv-prod-button:hover {
+    background:
+        linear-gradient(90deg, #FF0B0B 0%, #7F1112 100%) padding-box,
+        linear-gradient(90deg, #7F1112 0%, #E51E21 50%, #7F1112 100%) border-box;
+
+    box-shadow: 0 0 38px rgba(255, 11, 11, 0.22);
+}
+
+.serv-prod-button-icon {
+    width: clamp(12px, 0.95vw, 15px);
+    height: auto;
+    display: block;
+}
+
+/* =========================
+   CONTENEDOR DEL CARRUSEL
+========================= */
+
+.services-carousel {
+    position: relative;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: auto;
+    margin-top: 0;
+}
+
+/* =========================
+   TARJETA PRINCIPAL
+========================= */
+
+.carousel-card {
+    width: 100%;
+    max-width: 680px;
+
+    min-height: auto;             /* alto mínimo */
+    height: auto;
+    padding: 22px 52px 80px;       /* espacio interno */
+
+    border: 1.5px solid #ff1a1a;
+    border-radius: clamp(42px, 4.5vw, 72px);
+
+    background: #000;
+    position: relative;
+
+    padding:
+        clamp(22px, 2vw, 34px) clamp(45px, 5vw, 80px) clamp(85px, 6vw, 105px);
+
+    overflow: visible;
+}
+
+/* =========================
+   TRACK
+========================= */
+
+.carousel-track {
+    width: 100%;
+    min-height: auto;
+    position: relative;
+}
+
+/* =========================
+   CADA SLIDE
+========================= */
+
+.carousel-item {
+    display: none;
+    animation: fadeIn 0.4s ease;
+}
+
+.carousel-item.active {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    align-items: start;
+}
+
+/* =========================
+   IMAGEN DEL CARRUSEL
+========================= */
+
+.carousel-image {
+    display: block;
+
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    aspect-ratio: 1/1;
+
+    object-fit: contain;
+    object-position: center;
+
+    margin: 0 auto clamp(18px, 1.7vw, 26px);
+}
+
+/* =========================
+   CONTENIDO DEL CARRUSEL
+========================= */
+
+.carousel-content {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.carousel-content h3 {
+    color: #ff2525;
+
+    font-size: clamp(18px, 1.45vw, 24px);
+    font-weight: 900;
+
+    margin-bottom: clamp(8px, 0.8vw, 12px);
+
+    text-transform: uppercase;
+}
+
+.carousel-content p {    
+    color: #fff;
+
+    font-size: clamp(17px, 1.05vw, 16px);
+    line-height: 1.6;
+    font-weight: 600;
+
+    text-transform: uppercase;
+}
+
+/* =========================
+   BOTONES DEL CARRUSEL
+========================= */
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+
+    width: clamp(62px, 6.5vw, 108px);
+    height: clamp(62px, 6.5vw, 108px);
+
+    border: 1.5px solid #ff1a1a;
+    border-radius: 50%;
+
+    background: #000;
+    color: #ff1a1a;
+
+    font-size: clamp(36px, 4vw, 62px);
+    font-weight: 200;
+
+    cursor: pointer;
+    z-index: 20;
+    line-height: 1;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background: #ff1a1a;
+    color: #000;
+}
+
+.carousel-btn-left {
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+.carousel-btn-right {
+    right: 0;
+    transform: translate(50%, -50%);
+}
+
+/* =========================
+   INDICADORES
+========================= */
+
+.carousel-dots {
+    position: absolute;
+    left: 50%;
+    bottom: clamp(24px, 2vw, 32px);
+
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    max-width: 80%;
+    gap: clamp(8px, 0.9vw, 14px);
+}
+
+.carousel-dot {
+    width: clamp(18px, 2.2vw, 36px);
+    height: clamp(18px, 2.2vw, 36px);
+
+    border: 1.5px solid #ff1a1a;
+    border-radius: 50%;
+
+    background: transparent;
+    cursor: pointer;
+}
+
+.carousel-dot.active {
+    background: #d71010;
+}
+
+/* =========================
+   ANIMACIÓN
+========================= */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* =========================
+   PANTALLAS GRANDES
+========================= */
+
+@media (min-width: 1500px) {
+    .serv-prod-section {
+        grid-template-columns: minmax(320px, 440px) minmax(520px, 720px);
+        gap: 90px;
+        padding: 80px 90px;
+    }
+
+    .carousel-card {
+        width: 100%;
+        max-width: 700px;
+    }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 950px) {
+     .serv-prod-section {
+        grid-template-columns: 1fr;
+        gap: 45px;
+        padding: 55px clamp(20px, 5vw, 35px);
+    }
+
+    .serv-prod-info {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .services-carousel {
+        min-height: auto;
+        margin-top: 0;
+    }
+
+    .carousel-card {
+        width: min(100%, 620px);
+        height: auto;
+        min-height: 560px;
+    }
+
+    .carousel-btn-left {
+        left: 0;
+        transform: translate(-35%, -50%);
+    }
+
+    .carousel-btn-right {
+        right: 0;
+        transform: translate(35%, -50%);
+    }
+}
+
+/* =========================
+   MÓVIL
+========================= */
+
+@media (max-width: 650px) {
+    .serv-prod-section {
+        padding: 45px 18px;
+    }
+
+    .serv-prod-info {
+        text-align: center;
+    }
+
+    .serv-prod-title {
+        font-size: clamp(30px, 9vw, 48px);
+        line-height: 1.05;
+        letter-spacing: -1px;
+    }
+
+    .serv-prod-line {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .serv-prod-description {
+        font-size: 12px;
+    }
+
+    .serv-prod-line-second {
+        margin-top: 38px;
+    }
+
+    .serv-prod-button {
+        width: min(100%, 280px);
+        min-height: 56px;
+        display: flex;
+        margin: 65px auto 0;
+    }
+
+    .carousel-card {
+        width: 100%;
+        min-height: auto;
+        border-radius: 38px;
+
+        /* Más espacio lateral para que las flechas no pisen el texto */
+        padding: 22px 56px 90px;
+    }
+
+    .carousel-track {
+        min-height: auto;
+    }
+
+    .carousel-image {
+        max-width: 190px;
+    }
+
+    .carousel-content {
+        max-width: 100%;
+        padding-bottom: 20px;
+    }
+
+    .carousel-content h3 {
+        font-size: 18px;
+        line-height: 1.2;
+        text-align: left;
+    }
+
+    .carousel-content p {
+        font-size: 14px;
+        line-height: 1.45;
+        font-weight: 800;
+        text-align: left;
+    }
+
+    .carousel-btn {
+        width: 42px;
+        height: 42px;
+        font-size: 24px;
+        top: 58%;
+        z-index: 30;
+    }
+
+    .carousel-btn-left {
+        left: 10px;
+        transform: translateY(-50%);
+    }
+
+    .carousel-btn-right {
+        right: 10px;
+        transform: translateY(-50%);
+    }
+
+    .carousel-dots {
+        bottom: 28px;
+        max-width: 85%;
+        gap: 10px;
+    }
+
+    .carousel-dot {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+@media (max-width: 420px) {
+    .serv-prod-section {
+        padding: 35px 15px;
+    }
+
+    .serv-prod-title {
+        font-size: 32px;
+    }
+
+    .carousel-card {
+        border-radius: 25px;
+
+        /* Este es el ajuste clave para iPhone SE */
+        padding: 20px 48px 82px;
+    }
+
+    .carousel-image {
+        max-width: 180px;
+    }
+
+    .carousel-content h3 {
+        font-size: 17px;
+    }
+
+    .carousel-content p {
+        font-size: 13px;
+        line-height: 1.45;
+    }
+
+    .carousel-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 22px;
+        top: 58%;
+    }
+
+    .carousel-btn-left {
+        left: 8px;
+    }
+
+    .carousel-btn-right {
+        right: 8px;
+    }
+
+    .carousel-dot {
+        width: 12px;
+        height: 12px;
+    }
+}
