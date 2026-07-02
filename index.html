@@ -24,9 +24,37 @@
     <link rel="stylesheet" href="css/ubicacion.css">
     <link rel="stylesheet" href="css/unificado.css">
     <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/animacion.css">
 </head>
 
 <body>
+
+
+    <!--  Animación de Inicio -->
+    <div class="intro-loader" id="introLoader">
+        <main class="intro">
+            <div class="brand-mark" aria-label="Animación del isotipo Vision Technology SRL">
+                <div class="cube left">
+                    <img src="imgs/animacion/cuadrado-02.png" alt="Cubo rojo izquierdo" />
+                </div>
+                <div class="cube top">
+                    <img src="imgs/animacion/cuadrado-02.png" alt="Cubo rojo superior derecho" />
+                </div>
+                <div class="cube bottom">
+                    <img src="imgs/animacion/cuadrado-02.png" alt="Cubo rojo inferior" />
+                </div>
+            </div>
+
+            <div class="brand-text">
+                <img src="imgs/animacion/logo.png" alt="Vision Technology SRL" />
+            </div>
+        </main>
+    </div>
+    <!--  Animación de Inicio -->
+
+
+
+
 
     <!--  Este apartado es único del header -->
     <header class="header">
@@ -55,23 +83,12 @@
                 <a href="#blog">Blog</a>
             </nav>
 
-            <a class="header__button" href="#ubicacion">Solicitar cotización</a>
+            <a class="header__button" href="https://wa.me/59177799394" target="_blank" rel="noopener noreferrer">
+                Solicitar cotización
+            </a>
         </div>
     </header>
     <!--  Hasta aquí es el header -->
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -122,8 +139,11 @@
                             soluciones corporativas diseñadas para escalar.
                         </p>
                         <div class="hero__buttons">
-                            <a class="btn btn--primary" href="#">Solicitar asesoría →</a>
-                            <a class="btn btn--secondary" href="#">Ver soluciones</a>
+                            <a class="btn btn--primary" href="https://wa.me/59177799394" target="_blank"
+                                rel="noopener noreferrer">
+                                Solicitar asesoría →
+                            </a>
+                            <a class="btn btn--secondary" href="#productos">Ver Productos</a>
                         </div>
                     </div>
                     <div class="hero__visual">
@@ -530,7 +550,8 @@
                         SERVICIO TÉCNICO DE PRIMER NIVEL<br />
                         DISPONIBLE PARA TU EMPRESA
                     </p>
-                    <a class="serv-prod-button" href="">
+                    <a class="serv-prod-button" href="https://wa.me/59177799394" target="_blank"
+                        rel="noopener noreferrer">
                         Contactar ahora
                         <img alt="" class="serv-prod-button-icon" src="imgs/Serv_Prod/flecha.svg" />
                     </a>
@@ -742,12 +763,10 @@
                         </div>
                     </div>
 
-                    <button class="btn-contacto">
-
+                    <a class="btn-contacto" href="https://wa.me/59177799394" target="_blank" rel="noopener noreferrer">
                         Contactar ahora
-
                         <i class="fa-solid fa-paper-plane"></i>
-                    </button>
+                    </a>
                 </div>
 
 
@@ -785,7 +804,7 @@
 
 
 
-        
+
         <!-- APARTADO EXCLUSIVO DE BLOG / CAMPAÑAS -->
         <section id="blog" class="blog page-section">
             <div class="blog__container">
@@ -807,14 +826,14 @@
                     </div>
 
                     <div class="blog__featured-content">
-                        <span class="blog__category">Campaña destacada</span>
+                        <span class="blog__category">Nuestra Especialidad</span>
                         <h3>Soluciones tecnológicas para empresas modernas</h3>
                         <p>
                             Presentamos equipos, servicios y soluciones diseñadas para mejorar
                             la productividad, seguridad y continuidad operativa de tu empresa.
                         </p>
                         <a href="#ubicacion" class="blog__btn">
-                            Consultar campaña
+                            Equipos Tecnologicos
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
                     </div>
@@ -866,7 +885,9 @@
                                 Protege la información de tu empresa con soluciones de seguridad,
                                 licenciamiento y respaldo profesional.
                             </p>
-                            <a href="#ubicacion">Contactar</a>
+                            <a href="https://wa.me/59177799394" target="_blank" rel="noopener noreferrer">
+                                Contactar
+                            </a>
                         </div>
                     </article>
 
@@ -878,7 +899,7 @@
         <!--APARTADO EXCLUSIVO DE BLOG-->
 
 
-        
+
     </main>
 
     <script src="js/navegacion.js"></script>
@@ -889,6 +910,7 @@
     <script src="js/ubicacion/ubicacion.js"></script>
     <script src="js/ofertas.js"></script>
     <script src="js/header.js"></script>
+    <script src="js/animacion.js"></script>
 </body>
 
 </html>
